@@ -6,13 +6,16 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignUp = async () => {
+  const handleSignUp = async (e) => {
+    e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       console.log("User signed up successfully!");
     } catch (error) {
       console.error("Error signing up:", error.message);
     }
+    setEmail("");
+    setPassword("");
   };
 
   return (
