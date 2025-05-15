@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { auth } from "../database/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import Login from "./../pages/Login";
+import { Link } from "react-router-dom";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -20,20 +22,22 @@ function Register() {
 
   return (
     <div>
-      <h2>Sign Up</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSignUp}>Sign Up</button>
+      <div>
+        <h2>Sign Up</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button onClick={handleSignUp}>Sign Up</button>
+      </div>
     </div>
   );
 }
