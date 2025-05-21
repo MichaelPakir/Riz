@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Register from "../components/Register";
-function LoginForm() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const handleLogin = () => {
-    // Perform authentication logic here
-    setIsLoggedIn(true);
-  };
+
+const Login = () => {
   return (
     <div>
-      <h1>Login</h1>
-      <button onClick={handleLogin}>Log In</button>
+      <Register />
     </div>
   );
-}
-export default LoginForm;
+};
+
+export default Login;

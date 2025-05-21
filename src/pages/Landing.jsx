@@ -5,7 +5,7 @@ import Login from "./Login";
 const Landing = () => {
   return (
     <div>
-      <Register />
+      <Login />
     </div>
   );
 };
