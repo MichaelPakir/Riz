@@ -39,6 +39,7 @@ function App() {
           <Route path="/edit" element={<Edit />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/add" element={<Add />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </Router>
